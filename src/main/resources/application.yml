@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:C:/h2db/flagship
+    username: sa
+    password: sa
+    #platform: h2
+    #schema: clasepath:schema_test.sql
+    #data: classpath:data.sql
+##redis config
+  redis:
+    password: 
+    database: 0  
+    port: 6379  
+    pool:
+      max-idle: 10 
+      min-idle: 0  
+      max-active: 200  
+      max-wait: -1  
+    host: 127.0.0.1  
+    timeout: 10000
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+##scan folder
+ocr:
+  validation:
+    scan:
+      destfolder: C:\OCR_file_folder\output
+      srcfolder: C:\OCR_file_folder\input

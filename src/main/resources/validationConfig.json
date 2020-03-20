@@ -1,0 +1,34 @@
+{
+  "ValidateConfig": [
+    {
+      "srcFileName": "eclaim.csv",
+      "srcField": "MemberName",
+      "srcFiledType": "String",
+      "destFileName": "ocr.csv",
+      "destField": "Member",
+      "destFiledType": "String",
+      "srcType": "FILE",
+      "destType": "FILE"
+    },
+    {
+      "srcFileName": "",
+      "srcField": "",
+      "srcFiledType": "",
+      "destFileName": "ocr.csv",
+      "destField": "Doctor",
+      "destFiledType": "String",
+      "srcType": "DATABASE",
+      "destType": "FILE"
+    },
+    {
+      "srcFileName": "eclaim.csv",
+      "srcField": "RECIPT_AMT",
+      "srcFiledType": "Double",
+      "destFileName": "ocr.csv",
+      "destField": "RECIPT_AMT",
+      "destFiledType": "Double",
+      "srcType": "FILE",
+      "destType": "FILE"
+    }
+  ]
+}
