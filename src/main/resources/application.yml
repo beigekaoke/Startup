@@ -20,6 +20,7 @@ spring:
       max-wait: -1  
     host: 127.0.0.1  
     timeout: 10000
+##jpa config
   jpa:
     database: h2
     hibernate:
@@ -27,9 +28,22 @@ spring:
         use_jdbc_metadata_defaults: false
       ddl-auto: update
     show-sql: true
+##upload file limit
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+##context config
+server:
+  servlet:
+    context-path: /flagship
 ##scan folder
 ocr:
   validation:
     scan:
       destfolder: C:\OCR_file_folder\output
       srcfolder: C:\OCR_file_folder\input
+##upload file saved folder
+upload:
+  saved:
+    folder: D:\java_projects\Startup\mail_attachment
