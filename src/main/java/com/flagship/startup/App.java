@@ -16,19 +16,24 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class App 
 {
-    public static void main(String[] args) throws Exception {
-    	SpringApplication application = new SpringApplication(App.class);
-    	application.setBannerMode(Mode.OFF);
-    	application.run(args);
+    public static void main(String[] args) {
+    	try{
+			SpringApplication application = new SpringApplication(App.class);
+			application.setBannerMode(Mode.OFF);
+			application.run(args);
+		}catch(Exception e){
+    		e.printStackTrace();
+		}
+
     }
     
     @Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
-			System.out.println("来看看 SpringBoot 默认为我们提供的 Bean：");
+			//System.out.println("来看看 SpringBoot 默认为我们提供的 Bean：");
 			String[] beanNames = ctx.getBeanDefinitionNames();
 			Arrays.sort(beanNames);
-			Arrays.stream(beanNames).forEach(System.out::println);
+			//Arrays.stream(beanNames).forEach(System.out::println);
 		};
 	}
 }

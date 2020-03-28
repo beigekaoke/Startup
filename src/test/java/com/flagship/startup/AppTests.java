@@ -1,4 +1,4 @@
-package com.flagship.Startup;
+package com.flagship.startup;
 
 import java.util.List;
 

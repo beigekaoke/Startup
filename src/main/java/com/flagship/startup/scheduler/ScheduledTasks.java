@@ -147,7 +147,7 @@ public class ScheduledTasks {
 					.withSeparator(',').build();
 			List<CsClaimOcr> subList = build.parse();
 			ocrDatas.addAll(subList);
-			LOGGER.info("File {} prase list size {}", destfile.getAbsoluteFile(), subList.size());
+			LOGGER.info("File {} parse list size {}", destfile.getAbsoluteFile(), subList.size());
 		}
 
 		// this get annotion can be cache

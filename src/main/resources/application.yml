@@ -23,6 +23,8 @@ spring:
   jpa:
     database: h2
     hibernate:
+      temp:
+        use_jdbc_metadata_defaults: false
       ddl-auto: update
     show-sql: true
 ##scan folder
