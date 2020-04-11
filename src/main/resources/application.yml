@@ -22,7 +22,7 @@ spring:
     timeout: 10000
 ##jpa config
   jpa:
-    database: h2
+    #database: h2
     hibernate:
       temp:
         use_jdbc_metadata_defaults: false
