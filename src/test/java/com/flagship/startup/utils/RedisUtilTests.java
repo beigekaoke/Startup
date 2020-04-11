@@ -1,4 +1,4 @@
-package com.flagship.Startup.utils;
+package com.flagship.startup.utils;
 
 import static org.junit.Assert.*;
 
