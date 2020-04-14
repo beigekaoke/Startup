@@ -47,3 +47,9 @@ ocr:
 upload:
   saved:
     folder: D:\java_projects\Startup\mail_attachment
+##services url
+testValidator:
+  service1:
+    url: http://localhost:8080/stp/submit
+  service2:
+    url: http://localhost:8080/
