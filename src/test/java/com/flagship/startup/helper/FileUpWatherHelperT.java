@@ -16,7 +16,7 @@ public class FileUpWatherHelperT {
 	@Test
 	public void testFileUpWather() throws IOException {
 		// 说明，这里的监听也必须是目录
-		Path path = Paths.get("C:\\OCR_file_folder\\output");
+		Path path = Paths.get("D:\\logs");
 		WatchService watcher = FileSystems.getDefault().newWatchService();
 		path.register(watcher, StandardWatchEventKinds.ENTRY_CREATE);
 
@@ -28,10 +28,11 @@ public class FileUpWatherHelperT {
 
 						if (event.kind() == StandardWatchEventKinds.OVERFLOW) {
 							// 事件可能lost or discarded
+
 							continue;
 						}
 						Path fileName = (Path) event.context();
-						System.out.println("文件更新: " + fileName);
+						System.out.println("文件更新: " + fileName.toAbsolutePath());
 					}
 					if (!key.reset()) { // 重设WatchKey
 						break;
